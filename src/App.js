@@ -1,14 +1,15 @@
+import { StartMenu } from './components/StartMenu/StartMenu';
 import { useState } from 'react';
 import './App.css';
 
-function App() {
-  const [mode, setMode] = useState('start');
+export const App = () => {
+  const [scene, setScene] = useState('start');
 
   return (
     <div className="App">
-      {mode === 'start' && <>Start Menu</>}
-      {mode === 'battle' && <>Battle Scene</>}
-      {mode === 'gameOver' && <>Game Over</>}
+      {scene === 'start' && <StartMenu/>}
+      {scene === 'battle' && <>Battle Mode</>}
+      {scene === 'gameOver' && <>Game Over</>}
     </div>
   );
 }
