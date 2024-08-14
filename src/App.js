@@ -7,8 +7,8 @@ export const App = () => {
 
   return (
     <div className="App">
-      {scene === 'start' && <StartMenu/>}
-      {scene === 'battle' && <>Battle Mode</>}
+      {scene === 'start' && <StartMenu onStartClick={() => setScene('battle')}/>}
+      {scene === 'battle' && <>Battle Scene</>}
       {scene === 'gameOver' && <>Game Over</>}
     </div>
   );

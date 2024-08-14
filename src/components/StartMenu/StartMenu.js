@@ -1,7 +1,11 @@
 import styles from './styles.module.css';
 
-export function StartMenu() {
-    return <div className={styles.main}>
-        Start Menu Component
-    </div>
+export const StartMenu = ({ onStartClick }) => {
+    return (
+        <div className={styles.main}>
+            <button className={styles.startButton} onClick={onStartClick}>
+                Start Game
+            </button>
+        </div>
+    );
 };
