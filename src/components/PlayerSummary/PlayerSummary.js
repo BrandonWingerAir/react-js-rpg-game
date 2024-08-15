@@ -12,11 +12,11 @@ export const PlayerSummary = ({ main = false, name, level, health, maxHealth }) 
         >
             <div className={styles.info}>
                 <div className={styles.name}>{name}</div>
-                <div className={styles.level}>Lv. {level}</div>
+                <div className={styles.label}>Lv. {level}</div>
             </div>
 
             <div className={styles.health}>
-                <HealthBar/>
+                <HealthBar label="HP" value={health} maxHealth={maxHealth}/>
             </div>
         </div>
     );
