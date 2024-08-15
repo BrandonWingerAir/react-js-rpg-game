@@ -4,7 +4,7 @@ import { HealthBar } from '../HealthBar/HealthBar';
 const red = '#821200';
 const blue = '#1953cb';
 
-export const PlayerSummary = ({ main = false, name, level, health, maxHealth }) => {
+export const PlayerSummary = ({ main = false, name, level, value, maxValue }) => {
     return (
         <div 
             style={{ backgroundColor: main ? red : blue }} 
@@ -16,7 +16,7 @@ export const PlayerSummary = ({ main = false, name, level, health, maxHealth }) 
             </div>
 
             <div className={styles.health}>
-                <HealthBar label="HP" value={health} maxHealth={maxHealth}/>
+                <HealthBar label="HP" value={value} maxValue={maxValue}/>
             </div>
         </div>
     );
