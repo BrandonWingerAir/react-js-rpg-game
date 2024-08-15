@@ -1,15 +1,13 @@
 import styles from './styles.module.css';
 
-export const HealthBar = ({ label, value, maxValue }) => {
+export const HealthBar = ({ label, health, maxHealth }) => {
     return (
         <div className={styles.main}>
             <div className={styles.label}>{label}</div>
 
             <div className={styles.max}>
-                <div className={styles.value} style={{ width: `${(value / maxValue) * 100}%` }}>
-
-                </div>
+                <div className={styles.value} style={{ width: `${(health / maxHealth) * 100}%` }}></div>
             </div>
         </div>
-    )
+    );
 };

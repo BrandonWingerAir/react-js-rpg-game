@@ -12,13 +12,21 @@ export const BattleScene = () => {
             <div className={styles.user}>
                 <div className={styles.summary}>
                     <PlayerSummary 
+                        name={userStats.name}
+                        level={userStats.level}
                         health={userHealth}
+                        maxHealth={userStats.maxHealth}
                     main/>
                 </div>
             </div>
             <div className={styles.opponent}>
                 <div className={styles.summary}>
-                    <PlayerSummary health={opponentHealth}/>
+                    <PlayerSummary 
+                        name={opponentStats.name}
+                        level={opponentStats.level}
+                        health={opponentHealth}
+                        maxHealth={opponentStats.maxHealth}
+                    />
                 </div>
             </div>
         </div>
