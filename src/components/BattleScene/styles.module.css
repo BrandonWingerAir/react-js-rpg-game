@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.user,
+.opponent {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.summary {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.opponent .summary {
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.battleActions {
+    flex: 1;
+    height: 200px;
+}
