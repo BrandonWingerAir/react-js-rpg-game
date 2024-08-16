@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-js-rpg-game/static/css/main.d94ca950.css",
-    "main.js": "/react-js-rpg-game/static/js/main.559ad711.js",
+    "main.css": "/react-js-rpg-game/static/css/main.dbf5903e.css",
+    "main.js": "/react-js-rpg-game/static/js/main.fb1ed182.js",
     "static/js/453.4b5c8020.chunk.js": "/react-js-rpg-game/static/js/453.4b5c8020.chunk.js",
     "index.html": "/react-js-rpg-game/index.html",
-    "main.d94ca950.css.map": "/react-js-rpg-game/static/css/main.d94ca950.css.map",
-    "main.559ad711.js.map": "/react-js-rpg-game/static/js/main.559ad711.js.map",
+    "main.dbf5903e.css.map": "/react-js-rpg-game/static/css/main.dbf5903e.css.map",
+    "main.fb1ed182.js.map": "/react-js-rpg-game/static/js/main.fb1ed182.js.map",
     "453.4b5c8020.chunk.js.map": "/react-js-rpg-game/static/js/453.4b5c8020.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d94ca950.css",
-    "static/js/main.559ad711.js"
+    "static/css/main.dbf5903e.css",
+    "static/js/main.fb1ed182.js"
   ]
 }
