@@ -19,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://brandonwingerair.github.io/react-js-rpg-game",
   "eslintConfig": {
     "extends": [
       "react-app",
