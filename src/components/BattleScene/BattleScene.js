@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import { useState } from 'react';
 import { PlayerSummary } from '../PlayerSummary/PlayerSummary';
+import { BattleActions } from '../BattleActions/BattleActions';
 import { userStats, opponentStats } from '../../shared/characters';
 
 export const BattleScene = () => {
@@ -19,6 +20,7 @@ export const BattleScene = () => {
                     main/>
                 </div>
             </div>
+
             <div className={styles.opponent}>
                 <div className={styles.summary}>
                     <PlayerSummary 
@@ -28,6 +30,14 @@ export const BattleScene = () => {
                         maxHealth={opponentStats.maxHealth}
                     />
                 </div>
+            </div>
+
+            <div className={styles.battleActions}>
+                <BattleActions
+                    onAttack={() => console.log('Attack')}
+                    onAffect={() => console.log('Affect')}
+                    onHeal={() => console.log('Heal')}
+                />
             </div>
         </div>
     );
