@@ -4,13 +4,13 @@ export const BattleActions = ({ onAttack, onAffect, onHeal }) => {
     return (
         <div className={styles.main}>
             <div onClick={onAttack} className={styles.option} >
-                Claw Attack
+                Claw Strike
             </div>
             <div onClick={onAffect} className={styles.option}>
                 Throw Sand
             </div>
             <div onClick={onHeal} className={styles.option}>
-                Heal Self
+                Self-Heal
             </div>
         </div>
     )

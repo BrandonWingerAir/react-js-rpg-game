@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.players {
+.user,
+.opponent {
     gap: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 25px;
     box-sizing: border-box;
-}
-
-.playerSummaries {
-    display: flex;
-    justify-content: space-between;
 }
 
 .summary {

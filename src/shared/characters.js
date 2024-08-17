@@ -1,7 +1,7 @@
 export const userStats = {
     level: 44,
     maxHealth: 177,
-    name: 'Cat',
+    name: 'The Cat',
     img: '/react-js-rpg-game/assets/cat.png',
 
     magic: 32,
@@ -13,7 +13,7 @@ export const userStats = {
 export const opponentStats = {
     level: 44,
     maxHealth: 188,
-    name: 'Rat',
+    name: 'The Rat',
     img: '/react-js-rpg-game/assets/rat.png',
 
     magic: 50,
