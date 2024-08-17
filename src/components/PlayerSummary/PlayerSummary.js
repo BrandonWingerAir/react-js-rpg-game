@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import { HealthBar } from '../HealthBar/HealthBar';
+import { HealthBar } from 'components';
 
 const red = '#821200';
 const blue = '#1953cb';

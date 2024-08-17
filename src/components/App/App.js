@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { StartScene } from './components/StartScene/StartScene';
-import { BattleScene } from './components/BattleScene/BattleScene';
+import { StartScene, BattleScene } from 'components';
 
 export const App = () => {
   const [scene, setScene] = useState('start');
@@ -14,5 +13,3 @@ export const App = () => {
     </div>
   );
 }
-
-export default App;

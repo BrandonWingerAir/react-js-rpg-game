@@ -1,12 +1,12 @@
 import styles from './styles.module.css';
 import { useState } from 'react';
-import { PlayerSummary } from '../PlayerSummary/PlayerSummary';
-import { BattleActions } from '../BattleActions/BattleActions';
-import { userStats, opponentStats } from '../../shared/characters';
+import { PlayerSummary, BattleActions, BattleAnnouncer } from 'components';
+import { userStats, opponentStats } from 'shared';
 
 export const BattleScene = () => {
     const [userHealth, setUserHealth] = useState(userStats.maxHealth);
     const [opponentHealth, setOpponentHealth] = useState(opponentStats.maxHealth);
+    const [announcerMessage, setAnnouncerMessage] = useState('');
 
     return (
         <>
@@ -52,15 +52,21 @@ export const BattleScene = () => {
                         maxHealth={userStats.maxHealth}
                     main/>
                 </div>
-                
-                <div className={styles.actionsContainer}>
-                    <div className={styles.battleActions}>
-                        <BattleActions
-                            onAttack={() => console.log('Attack')}
-                            onAffect={() => console.log('Affect')}
-                            onHeal={() => console.log('Heal')}
-                        />
-                    </div>
+            </div>
+
+            <div className={styles.battleWrapper}>
+                <div className={styles.battleContainer}>
+                    <BattleAnnouncer
+                        message={announcerMessage || `What will ${userStats.name} do?`}
+                    />
+                </div>
+
+                <div className={styles.battleContainer}>
+                    <BattleActions
+                        onAttack={() => console.log('Attack')}
+                        onAffect={() => console.log('Affect')}
+                        onHeal={() => console.log('Heal')}
+                    />
                 </div>
             </div>
 
