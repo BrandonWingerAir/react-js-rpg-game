@@ -1,12 +1,29 @@
 import styles from './styles.module.css';
-import { useState } from 'react';
 import { PlayerSummary, BattleActions, BattleAnnouncer } from 'components';
+import { useAIOpponent, useBattleSequence } from 'hooks';
+import { useEffect, useState } from 'react';
 import { userStats, opponentStats } from 'shared';
 
 export const BattleScene = () => {
-    const [userHealth, setUserHealth] = useState(userStats.maxHealth);
-    const [opponentHealth, setOpponentHealth] = useState(opponentStats.maxHealth);
-    const [announcerMessage, setAnnouncerMessage] = useState('');
+    const [sequence, setSequence] = useState({});
+
+    const {
+        turn,
+        inSequence,
+        userHealth,
+        opponentHealth,
+        announcerMessage,
+        userAnimation,
+        opponentAnimation
+    } = useBattleSequence(sequence);
+
+    const opponentChoice = useAIOpponent(turn);
+
+    useEffect(() => {
+        if (opponentChoice && turn === 1 && !inSequence) {
+            setSequence({ turn, mode: opponentChoice });
+        }
+    }, [turn, opponentChoice, inSequence]);
 
     return (
         <>
@@ -31,6 +48,7 @@ export const BattleScene = () => {
                         <img
                             src={userStats.img}
                             alt={userStats.name}
+                            className={styles[userAnimation]}
                         />
                     </div>
                     
@@ -38,6 +56,7 @@ export const BattleScene = () => {
                         <img
                             src={opponentStats.img}
                             alt={opponentStats.name}
+                            className={styles[opponentAnimation]}
                         />
                     </div>
                 </div>
@@ -63,9 +82,9 @@ export const BattleScene = () => {
 
                 <div className={styles.battleContainer}>
                     <BattleActions
-                        onAttack={() => console.log('Attack')}
-                        onAffect={() => console.log('Affect')}
-                        onHeal={() => console.log('Heal')}
+                        onAttack={() => setSequence({ turn, mode: 'attack' })}
+                        onAffect={() => setSequence({ turn, mode: 'magic' })}
+                        onHeal={() => setSequence({ turn, mode: 'heal' })}
                     />
                 </div>
             </div>
