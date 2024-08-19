@@ -139,7 +139,7 @@ export const useBattleSequence = sequence => {
                             setAnnouncerMessage(`${target.name}'s turn!`);
                             await wait(1500);
 
-                            setTurn(turn === 0 ? 1 : 1);
+                            setTurn(turn === 0 ? 1 : 0);
                             setInSequence(false);
                         })();
 

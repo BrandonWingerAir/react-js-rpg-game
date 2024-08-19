@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { StartScene, BattleScene } from 'components';
+import { StartScene, BattleScene, EndScene } from 'components';
 
 export const App = () => {
   const [scene, setScene] = useState('start');
@@ -17,7 +17,12 @@ export const App = () => {
           }
         }/>
       )}
-      {scene === 'gameEnd' && <>Game Over</>}
+      {scene === 'gameEnd' && (
+        <EndScene winner={winner} onStartClick={() => {
+          setWinner(undefined);
+          setScene('battle');
+        }}/>
+      )}
     </div>
   );
 }
