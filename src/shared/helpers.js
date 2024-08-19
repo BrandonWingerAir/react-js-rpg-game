@@ -12,14 +12,14 @@ export const attack = ({ attacker, target }) => {
     return finalDamage;
 }
 
-export const affect = ({ attacker, target }) => {
-    const recievedDamage = attacker.affect - (attacker.level - target.level) * 1.25;
+export const magic = ({ attacker, target }) => {
+    const recievedDamage = attacker.magic - (attacker.level - target.level) * 1.25;
 
-    const finalDamage = recievedDamage - target.affectDefense / 2;
+    const finalDamage = recievedDamage - target.magicDefense / 2;
 
     return finalDamage;
 }
 
-export const heal = ({ user }) => {
-    return user.healing + user.level * 0.25;
+export const heal = ({ target }) => {
+    return target.magic + target.level * 0.25;
 }
