@@ -15,7 +15,7 @@ export const attack = ({ attacker, target }) => {
 export const magic = ({ attacker, target }) => {
     const recievedDamage = attacker.magic - (attacker.level - target.level) * 1.25;
 
-    const finalDamage = recievedDamage - target.magicDefense / 2;
+    const finalDamage = recievedDamage - target.defense / 2;
 
     return finalDamage;
 }
